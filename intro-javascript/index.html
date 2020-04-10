@@ -12,12 +12,14 @@
 
 		<header>
 			<div class="container">
-				<h1 class = "titulo" >Aparecida Nutrição</h1>
+				<h1 class = "titulo">Aparecida Nutrição</h1>
 			</div>
 		</header>
 		<main>
 			<section class="container">
 				<h2>Meus pacientes</h2>
+				<label for="filtrar-tabela">Filtre:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do paciente" />
 				<table>
 					<thead>
 						<tr>
@@ -37,7 +39,7 @@
 							<td class="info-imc">0</td>
 						</tr>
 
-						<tr class="paciente" >
+						<tr class="paciente">
 							<td class="info-nome">João</td>
 							<td class="info-peso">80</td>
 							<td class="info-altura">1.72</td>
@@ -45,7 +47,7 @@
 							<td class="info-imc">0</td>
 						</tr>
 
-						<tr class="paciente" >
+						<tr class="paciente">
 							<td class="info-nome">Erica</td>
 							<td class="info-peso">54</td>
 							<td class="info-altura">1.64</td>
@@ -60,7 +62,7 @@
 							<td class="info-gordura">24</td>
 							<td class="info-imc">0</td>
 						</tr>
-						<tr class="paciente" >
+						<tr class="paciente">
 							<td class="info-nome">Tatiana</td>
 							<td class="info-peso">46</td>
 							<td class="info-altura">1.55</td>
@@ -69,13 +71,16 @@
 						</tr>
 					</tbody>
 				</table>
-
+				<span id="erro-ajax" class="invisivel">Erro ao buscar os pacientes</span>
+				<button id="buscar-pacientes" class="botao bto-principal">Buscar Pacientes</button>
 			</section>
+		</main>
 
 			<section class="container">
 		    <h2 id="titulo-form">Adicionar novo paciente</h2>
-		    <form>
-		        <div class="grupo">
+			<ul id="mensagens-erro"></ul>
+		    <form id="form-adiciona">
+		        <div class="">
 		            <label for="nome">Nome:</label>
 		            <input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
 		        </div>
@@ -96,7 +101,11 @@
 		    </form>
 			</section>
 
-		</main>
-	<script src= "js/principal.js"></script>
+		<!-- Importação dos Javascripts AQUI -->
+		<script src= "js/calcula-imc.js" ></script>
+		<script src= "js/form.js" ></script>
+		<script src="js/remove-paciente.js" ></script>
+		<script src="js/filtra.js" ></script>
+		<script src="js/buscar-pacientes.js"></script>
 	</body>
 </html>
