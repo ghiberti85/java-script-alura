@@ -9,12 +9,21 @@
   text-align: left;
 }
 
+#frase-id{
+  width: 40px;
+  text-align: center;
+}
+
 .campo-desativado {
   background-color: lightgray;
 }
 
 .icones {
   vertical-align: middle;
+}
+
+#botao-sync{
+  float: right;
 }
 
 .borda-verde {
@@ -40,4 +49,17 @@ body {
 
 #spinner{
   display: none;
+}
+
+.select-usuarios{
+  display:inline-block;
+}
+
+#usuarios{
+  display:block;
+}
+
+.selectize-input {
+  width: 150px;
+  vertical-align: middle;
 }
